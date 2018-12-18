@@ -1,9 +1,12 @@
 import sys
 
-## to avoid O(n) searches I am trading off for space usage
-## so the history is maintained inside a dictionary for O(1) access
+def first():
+    result = 0
+    for line in sys.stdin:
+        result += int(line)
+    print result
 
-def main():
+def second():
     history = {}
     sample = []
     current = 0
@@ -27,4 +30,4 @@ def main():
         index = (index + 1) % len(sample)
 
 if __name__ == "__main__":
-    main()
+    first()
